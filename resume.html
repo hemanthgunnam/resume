@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hemanth Gunnam</title>
+	<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+	
+
+	<style>
+		body{
+			margin:0;
+			background-color: #f5eaea;
+			color: white;
+			background-image: url('images/seattle.jpg');
+			background-repeat: repeat-x;
+			background-repeat: repeat-y;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+		}
+		.headerr{
+			height: 100px;
+			width:100%;
+			background-color:#67cbb5;
+			padding: 0;
+
+
+		}
+		.footerr{
+			background-color: #67cbb5;
+			height: 40px;
+			width: 100%;
+			bottom: 0;
+			position: fixed;
+			
+			text-align: center;
+			padding-top: 10px;
+		}
+		.container{
+
+
+		}
+		.myname{
+			color: #4c5559;
+			font-weight: bold;
+			font-size: 20pt;
+			text-align: center;
+			padding-top: 12px;
+		}
+		.leftmenu{
+			position: relative;
+			left: 20px;
+			top:10px;
+			width: 250px;
+			background-color: #82898c;
+			height: 250px;
+			float: left; ;
+			margin-left: 20px;
+			margin-top:10px;
+			border-radius: 6px;
+			opacity: 0.94;
+		}
+		.contentarea{
+			float: left;
+			position: relative;
+			left:20px;
+			top:10px;
+			width: 850px;
+			height: 550px;
+			background-color: #67cbb5;
+			margin-left: 20px;
+			margin-top:10px;
+			border-radius: 6px;
+			padding-right: 10px;
+			overflow-y: auto;
+			min-width: 250px;
+			opacity: 0.94;
+
+		}
+		.pic{
+			float: left;
+			position: relative;
+			left:20px;
+			top:10px;
+			width: 150px;
+			height: 150px;
+			background-color: skyblue;
+			margin-left: 20px;
+			margin-top:10px;
+			margin-bottom: 150px;
+		}
+		li{
+			
+			
+			font-size: large;
+			padding-top: 20px;
+		}
+		br{
+			margin: 0;
+			padding: 0;
+		}
+		td{
+			padding-left: 10px;
+			opacity: 0.94;
+		}
+		@media(max-width: 768px){
+			.contentarea{
+				width: auto;
+				margin-right: 50px;
+				height: auto;
+				padding-bottom: 20px;
+				padding-right: 10px;
+			}
+			.footerr{
+				height: 80px;
+			}
+			
+		}
+		.menuitem:hover{
+			background-color: #67cbb5;
+			cursor:  pointer;
+		}
+		.menuitem-selected:{
+			background-color: #67cbb5;
+		}
+		hr{
+			background-color: white;
+			height: 3px;
+			border:none;
+			margin-left: 10px;
+		}
+		.social{
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			
+		}
+
+	</style>
+	<script type="text/javascript">
+
+		 
+  
+		var selecteditem=function(item){
+
+			$(".menuitem").attr("style","background-color:");
+			item.style.background="#67cbb5";
+			$(".contentarea").empty();
+
+			$(".contentarea").append($("#"+item.innerHTML.replace(/ /g,'')).html());
+			if(item.innerHTML=="EXPERIENCE")
+				$("#accordion").accordion({
+					collapsible:true,active:false
+				});
+				
+
+		}
+
+
+	</script>
+</head>
+<body>
+	<div class="headerr">
+		<table align="center">
+			<tr>
+				<td class="myname">HEMANTH GUNNAM</td>
+			</tr>
+			<tr>
+				<td align="center">
+					Mobile: 7396567753		
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					Email: hemanthgunnam@yahoo.com		
+				</td>
+			</tr>
+		</table>	
+		
+	</div>
+	<div class="container">
+		<div class="leftmenu">
+			<table style="width: 100%;height: 100%;font-weight: bold;padding-top: 5px;padding-bottom:5px" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="menuitem" onmouseover="selecteditem(this)" onclick="selecteditem(this)">SUMMARY</td>
+				</tr>
+				<tr>
+					<td class="menuitem" onmouseover="selecteditem(this)" onclick="selecteditem(this)">PRIMARY SKILLS</td>
+				</tr>
+				<tr>
+					<td class="menuitem" onmouseover="selecteditem(this)" onclick="selecteditem(this)">SECONDARY SKILLS</td>
+				</tr>
+				<tr>
+					<td class="menuitem" onmouseover="selecteditem(this)" onclick="selecteditem(this)">EXPERIENCE</td>
+				</tr>
+				<tr>
+					<td class="menuitem" onmouseover="selecteditem(this)" onclick="selecteditem(this)">EDUCATION</td>
+				</tr>
+				<tr>
+					<td class="menuitem" onmouseover="selecteditem(this)" onclick="selecteditem(this)">HOBBIES</td>
+				</tr>
+			</table>
+		</div>
+		<div class="contentarea" id="stuff">
+			<h2 style="padding-left: 10px">SUMMARY</h2>
+			<img src="images/mcts.png" width="115px" height="65px" style="padding-left: 10px" />
+			<hr/>
+			<ul>
+				<li>Overall 9 years of Software Development experience developing enterprise applications. </l>
+				<li>2 years of Technical Lead experience mentoring development teams. </li>
+				<li>Strong architectural and design experience to build robust applications that scale.</li>
+				<li>In-depth knowledge of software fundamentals, design patterns and computer architecture.</li>
+				<li>Experience with UI design, Customer Experience and Usability Testing.</li>
+				<li>Experience with cloud platforms like AWS, AZURE and Google Cloud.</li>
+			<ul>
+		</div>
+		<div class="pic">
+			<img src="profile.png" width="150px" height="200px"  />
+		</div>
+	</div>
+	<div class="footerr">
+		Copyright 2015 Hemanth Gunnam
+	</div>	
+	<div class="social">
+		<a href="https://www.facebook.com/hemanthkumargunnam" target="_blank" style="text-decoration: none;">
+			<img src="images/fb-art.jpg" width="25px" height="25px">
+		</a> 
+		<a href="https://in.linkedin.com/in/hemanthgunnam" target="_blank" style="text-decoration: none;">
+			<img src="images/linkedin.png" width="25px" height="25px">	
+		</a>
+		<a href="https://www.youtube.com/channel/UCt4lNufs5Xq0gT7x6Tzmk4g" target="_blank" style="text-decoration: none;">
+			<img src="images/youtube.png" width="25px" height="25px">	
+		</a>
+		
+
+	</div>
+	<div id="SUMMARY" style="display: none;">
+		<h2 style="padding-left: 10px">SUMMARY</h2>
+		<img src="images/mcts.png" width="115px" height="65px" style="padding-left: 10px" />
+		<hr/>
+			<ul>
+				<li>Overall 9 years of Software Development experience developing enterprise applications. </li>
+				<li>2 years of Technical Lead experience mentoring development teams. </li>
+				<li>Strong architectural and design experience to build robust applications that scale.</li>
+				<li>In-depth knowledge of software fundamentals, design patterns and computer architecture.</li>
+				<li>Experience with UI design, Customer Experience and Usability Testing.</li>
+				<li>Experience with cloud platforms like AWS, AZURE and Google Cloud.</li>
+			<ul>
+	</div>
+	<div id="PRIMARYSKILLS" style="display: none;">
+		<h2 style="padding-left: 10px">PRIMARY SKILLS</h2>
+		<hr/>
+			<ul>
+				<li>Programming Languages:	C#, JavaScript</li>
+				<li>UI Technologies: 		HTML, JQuery, CSS</li>
+				<li>Web Technologies: 		ASP.NET, ASP.NET MVC</li>
+				<li>Service Technologies: 	REST, SOAP, WCF</li>
+				<li>Databases: 				SQL Server, MySQL</li>
+				<li>Reporting Tools: 		Crystal Reports, SQL Server Reports</li>
+				<li>Source Control: 		TFS, SVN, Clear Case</li>
+				<li>Cloud Technologies: 	Amazon Cloud API, Azure, Google Cloud</li>
+			<ul>
+	</div>
+	<div id="SECONDARYSKILLS" style="display: none;">
+		<h2 style="padding-left: 10px">SECONDARY SKILLS</h2>
+		<hr/>
+			<ul>
+				<li>
+					JavaScript:  Jasmine, Grunt, NPM, Bower, D3.js, Angular.js
+				</li>
+				<li>Languages: Django/Python, Java</li>
+				<li>Mobile: Windows Mobile apps</li>
+				<li>Databases: Oracle, DB2, PostgreSQL</li>
+				<li>Tools: VMWare API, ORCA, Morae</li>
+				
+			<ul>
+	</div>
+	<div id="EXPERIENCE" style="display: none;">
+		<h2 style="padding-left: 10px">EXPERIENCE</h2>
+		<hr/>
+			<div id="accordion" style="padding-left: 10px">
+				<h3>Senior Software Engineer at Quest Diagnostics, Lenexa, April 2015 to September 2015</h3>
+				<div>
+				<p>
+					Worked on the web application Apex wellness engine the largest wellness business process application.<br/>
+					Worked on several schedule and remainder email services integrated with Apex application that reminds participants, program managers and sub-contractors (doctors, nurses) about their upcoming wellness appointments.<br/>
+					Worked on the Summit Health web application that manages delivery of vaccines and equipment to the wellness clinics that are both onsite and offsite. <br/>
+					Redesigned the FrontEnd of the APEX web application. <br/>
+					Technology Stack: ASP.NET, C#, WCF, JavaScript, JQuery, CSS, Visual Studio 2013					
+				</p>
+				</div>
+ 
+				<h3> Senior Software Engineer at Washington State Ferries, Seattle, June 2014 to March 2015</h3>
+				<div>
+				<p>
+					Worked on the web application for their Vehicle Reservation System on the vessels.<br/>
+					Worked on the IVRS System integrated with the VRS web application.<br/>
+					Worked on Space Management module which calculates the space available based on vehicle dimensions and the incurring charges based on the route.<br/>
+					Worked on Tiered Release module which releases reservation spaces in tiers which is configurable based on different routes.<br/>
+					Worked on VRS mobile website which allows users to make reservations through their mobile devices.<br/>
+					Technology Stack: ASP.NET MVC, C#, HTML5, JavaScript, JQuery, WCF, Web API, Visual Studio 2012<br/>
+				</p>
+				</div>
+
+				<h3>Intern at SAP Labs, Palo Alto, June 2013 to March 2014</h3>
+				<div>
+				<p>
+					Worked on SAP Lumira SDK, creating D3 HTML5 custom visualization extensions.<br/>
+					Team member BI Customer Experience Team which handles Design Councils, TechEd, Sapphire and BOBJ conferences for SAP Lumira.<br/>
+					Cleared bottlenecks that make using SAP Lumira SDK difficult. Delivered knowledge sessions to SAP Lumira SDK Shanghai team that helped them develop a tool which makes building extensions much simpler.<br/>
+					Worked with SAP Lumira Vancouver and Paris team to put forth the customer expectations on the upcoming releases related to SDK extensions and dashboards.<br/>
+					Technology Stack: Java, D3.js, JavaScript, JQuery, SAP Lumira, HTML5, CSS, MongoDB, MySQL, Sublime Text, Eclipse, ASP.NET, Visual Studio 2012, AWS <br/>
+				</p>
+				</div>
+
+				<h3> Software Engineer at Computer Sciences Corporation, Hyderabad, April 2010 to July 2012</h3>
+				<div>
+				<p>
+					Full lifecycle software development project Scandinavian Airlines Sales Reporting System for Scandinavian Airlines Group. <br/>
+					Developed master data module and accounting module of the application which makes the core of the system.<br/>
+					Maintenance of the following applications.<br/>
+						CODS - Customer Operational Data Storage<br/>
+						AAM - Authentication and Authorization Module<br/>
+						AADS - Authentication and Authorization Data Service<br/>
+						CAP - Corporate Account Profile<br/>
+						CAPDS - Corporate Account Profile Data Service<br/>
+						PAI - Partner Accrual Interface<br/>
+						SAUA - Star Alliance Upgrade Award<br/>
+					Technology Stack: ASP.NET, WCF, REST, C#, JavaScript, JQuery, Window Forms, SQL Server, Visual Studio 2008<br/>
+				</p>
+				</div>
+
+				<h3>Senior Software Engineer at Misys Pvt. Ltd, Bangalore, Jan 2008 to April 2010</h3>
+				<div>
+				<p>
+					Team member developing the product Misys LoanIQ Trading Application a real time trading application for secondary sales in syndicated lending market for RBS London.<br/> 
+					Offshore team member for the product. Handled both development and maintenance work.<br/>
+					Communicate very frequently with onsite team to gather requirements and develop them with minimum guidance.
+					<br/> 
+					Multi Column Sort on a tree grid for parent rows with simultaneous real-time update of complex related financial data on the syncfusion grid.<br/>
+					Designing and developing user editable confirms and transfer certificates with .net controls on word documents using TE Editor from Sub Systems.<br/>
+					Developed an MSI package with custom dialogs and custom actions with multiple controls on each dialog using ORCA tool and visual studio, which avoided the need of third party tools like install shield.<br/>
+					Technology Stack: ASP.NET, JavaScript, Windows Forms, Remoting, C#, SQL Server, Visual Studio 2008<br/>
+				</p>
+				</div>
+
+				<h3>Software Engineer at Miracle InfoTech Pvt. Ltd, Bangalore, May 2007 to Dec 2007</h3>
+				<div>
+				<p>
+					Worked on the full life cycle software development product Crew Manager a work schedule and mobile  workforce management application for UNIQUE Business Systems at E2 Solutions India Pvt. Ltd Bangalore.<br/> 
+					Involved in designing the architecture of the project comprising of a web and desktop application based on the business requirements. <br/>
+					Developed a GUI prototype for the product using xml as the backend. <br/>
+					Creating a custom control library for the product.<br/>
+					Participated in designing the application integrating MVP and ABSTRACT Factory Patterns.<br/>
+					Developing the application with both Oracle and SQL Server as backend. <br/>
+					Technology Stack: ASP.NET, JavaScript, Windows Forms, C#, Oracle and DB2, Visual Studio 2005<br/>
+				</p>
+				</div>
+
+				<h3>Software Engineer at Imokshum Technologies, Visakhapatnam, Dec 2005 to May 2007</h3>
+				<div>
+				<p>
+					Developed the website Amarillo Parks booking website for Amarillo Parks and Recreation, Texas.<br/>
+					Developed Texas Pension Board Quarterly Reporting System for the State of Texas.  <br/>
+					Involved in designing the architecture of the project comprising of a web and desktop application. <br/>
+					Creating Rich Text, Pointer and Media Controls that could be dragged on to a slide dynamically.<br/>
+					Creating and consuming Web Services in the Application.<br/>
+					Designing and Programming web pages in asp.net and c#.net.<br/>
+					Synchronizing the data between Web and the Desktop application.<br/>
+					Generating reports in the web application.<br/>
+					Technology Stack: ASP.NET, JavaScript, Windows Forms, C#, SQL Server, Crystal Reports, Web Services, Visual Studio 2003<br/>
+				</p>
+				</div>
+			</div>
+	</div>
+	<div id="EDUCATION" style="display: none;">
+		<h2 style="padding-left: 10px">EDUCATION</h2>
+		<hr/>
+			
+			<table align="center">
+				<tr>
+					<td>
+						<img src="images/sjsu.png" width="100px" height="100px">		
+					</td>
+					<td style="vertical-align: top;">
+						Master's in Software Engineering in Enterprise Software and Cloud Technologies at San Jose State University May 2014, GPA: 3.6/4.0		
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/jntu.jpg" width="100px" height="100px">		
+					</td>
+					<td style="vertical-align: top;">
+						Bachelor of Technology in Electronics and Communication Engineering at JNTU Hyderabad April 2005 with 67%.
+					</td>
+				</tr>
+			</table>
+				
+				
+
+				
+				
+			
+	</div>
+	<div id="HOBBIES" style="display: none;">
+		<h2 style="padding-left: 10px">HOBBIES</h2>
+		<hr/>
+			<ul>
+				<li>Travelling </li>
+				<li>Movies </li>
+				<li>Food</li>
+				
+			<ul>
+	</div>
+	
+</body>
+</html>
